@@ -1,5 +1,5 @@
 # Import Dependencies
-import numpy as np
+import pandas as pd
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -17,12 +17,12 @@ app = Flask(__name__)
 # Connect to PostgreSQL
 #################################################
 engine = create_engine(f'postgresql://postgres:postgres@localhost:5432/pharma_db')
-Base = automap_base()
-Base.prepare(engine, reflect=True)
+# Base = automap_base()
+# Base.prepare(engine, reflect=True)
 
-# Save reference to the table
-population = Base.classes.population
-pharma_spending = Base.classes.pharma_spending
+# # Save reference to the table
+# population = Base.classes.population
+# pharma_spending = Base.classes.pharma_spending
 
 #################################################
 # Flask Routes
@@ -42,13 +42,12 @@ def data():
 
     """Return a population table"""
     # Query population
-    results = session.query(population.population).all()
+    results = pd.read_sql_query('select country from population', con=engine).head()
 
     session.close()
 
-    all_names = list(np.ravel(results))
-    print(all_names, flush = True)
-    return "everything worked"
+    print(results, flush = True)
+    return (results)
 
 if __name__ == '__main__':
     app.run(debug=True)
