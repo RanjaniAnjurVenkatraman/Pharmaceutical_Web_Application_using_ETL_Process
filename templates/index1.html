@@ -1,0 +1,61 @@
+
+{% include "header.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+{% block body %}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col md-12">
+
+            <h2>Population Data </h2> 
+
+
+
+
+
+            <table class="table table-striped">
+
+
+              <tr>
+              <th>Country_code</th>
+              <th>Country</th>
+              <th>Population</th>
+              </tr>
+
+
+
+
+
+              {% for row in population %}
+               <tr>
+                  <td>{{row.0}}</td>
+                  <td>{{row.1}}</td>
+                  <td>{{row.2}}</td>
+                  <td>{{row.3}}</td>
+		          <td>{{row.4}}</td>
+
+
+                </tr>
+				{% endfor  %}
+             </table>
+     
+         </div>
+
+  
+
+  {% include "footer.html" %}
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+
+
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
