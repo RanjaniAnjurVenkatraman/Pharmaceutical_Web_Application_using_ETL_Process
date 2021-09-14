@@ -80,6 +80,7 @@ A Flask application was created to display data for the following routes:
 5. To open your default browser to the rendered page, Ctrl+click the http://127.0.0.1:5000/ URL in the terminal.
 6. On the webpage, click 'Routes' to view and explore Population, Pharmaceutical and Pharmaceutical Spending data. 
 
+
 ## Visualizations 	
 Countries with the highest pharmaceutical spend include: <br>
 <img src="https://i.pinimg.com/originals/7c/f6/d6/7cf6d611cba4092b60c667b36667bc62.jpg" width=800 align=center> <br>
