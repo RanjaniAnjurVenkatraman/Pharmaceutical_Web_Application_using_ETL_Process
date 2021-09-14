@@ -54,13 +54,32 @@ Transformations include:
 Due to the relational nature of the population and pharmaceutical spending data, we decided to use PostgreSQL. Pandas was used to load dataframes into the database. Tables were merged on ‘country code’ using SQL in PostgreSQL. SQLAlchemy was then used with Flask to deploy results to an HTML page. 
 	
 ## Flask App 
-A web application was built using Flask to display data across the following routes: 
-- /population
-[add screenshot]
-- /pharmaceutical_spend
-[add screenshot]
-- /pharma_population
-[add screenshot]
+A Flask application was created to display data for the following routes: 
+<br>
+- / <br>
+<br>
+<img src="https://i.pinimg.com/originals/f2/42/04/f24204c441e79cbec95ed179f0dace50.jpg" width=600 align=center> <br>
+
+- /population <br>
+<br>
+<img src="https://i.pinimg.com/originals/a6/ef/26/a6ef264ad56d89f7743b2b701e287c6e.jpg" width=600 align=center> <br>
+
+- /pharma_spending <br>
+<br>
+<img src="https://i.pinimg.com/originals/5e/54/5f/5e545fa765feac3390ae7ca823da5eb2.jpg" width=600 align=center> <br>
+
+- /population_pharma_spending <br>
+<br>
+<img src="https://i.pinimg.com/originals/1a/bd/ae/1abdaed9716a68537ddff55324f0b825.jpg" width=600 align=center> <br>
+
+#### How to Run The Application
+1. Ensure Flask is installed in the virtual environment: 'python -m pip install flask'.
+2. Clone this repository to run on your local machine.
+3. In the virtual environment, navigate to the 'Pharmaceutical App' folder.
+4. In the virtual environment, run the app by using the command'python app.py'
+5. To open your default browser to the rendered page, Ctrl+click the http://127.0.0.1:5000/ URL in the terminal.
+6. On the webpage, click 'Routes' to view and explore Population, Pharmaceutical and Pharmaceutical Spending data. 
+
 
 ## Visualizations 	
 Countries with the highest pharmaceutical spend include: <br>
@@ -74,4 +93,3 @@ Countries with the lowest pharmaceutical spend include: <br>
 - [Ranjani Venkatraman](https://github.com/RanjaniAnjurVenkatraman)
 - [Saiana Darizhapova](https://github.com/Saiana82)
 - [Lauren To](https://github.com/laurenemilyto)
-
